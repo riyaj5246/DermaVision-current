@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomePageView: View {
     @State var forecast = [[String]]()
-    @State var personName = "Sruthi"
+    @State var personName = "Riya"
     
     var body: some View {
         ScrollView {
