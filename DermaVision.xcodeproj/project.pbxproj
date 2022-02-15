@@ -20,6 +20,21 @@
 		B4CFC00427AC6C70007C3BBA /* DermaVisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CFC00327AC6C70007C3BBA /* DermaVisionTests.swift */; };
 		B4CFC00E27AC6C70007C3BBA /* DermaVisionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CFC00D27AC6C70007C3BBA /* DermaVisionUITests.swift */; };
 		B4CFC01027AC6C70007C3BBA /* DermaVisionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CFC00F27AC6C70007C3BBA /* DermaVisionUITestsLaunchTests.swift */; };
+		B4F0495127BAF21A00CFF568 /* skinCan3.tflite in Resources */ = {isa = PBXBuildFile; fileRef = B4F0494827BAF21A00CFF568 /* skinCan3.tflite */; };
+		B4F0495227BAF21A00CFF568 /* mobilenet_quant_v1_224.tflite in Resources */ = {isa = PBXBuildFile; fileRef = B4F0494927BAF21A00CFF568 /* mobilenet_quant_v1_224.tflite */; };
+		B4F0495327BAF21A00CFF568 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = B4F0494A27BAF21A00CFF568 /* labels.txt */; };
+		B4F0495627BAF21A00CFF568 /* labels_skin.txt in Resources */ = {isa = PBXBuildFile; fileRef = B4F0494D27BAF21A00CFF568 /* labels_skin.txt */; };
+		B4F0495C27BAF34500CFF568 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0495A27BAF34500CFF568 /* PreviewView.swift */; };
+		B4F0495D27BAF34500CFF568 /* CameraFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0495B27BAF34500CFF568 /* CameraFeedManager.swift */; };
+		B4F0496227BAF3E100CFF568 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0495F27BAF3E100CFF568 /* InfoCell.swift */; };
+		B4F0496327BAF3E100CFF568 /* CVPixelBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0496127BAF3E100CFF568 /* CVPixelBufferExtension.swift */; };
+		B4F0496627BAF40300CFF568 /* ModelDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0496527BAF40300CFF568 /* ModelDataHandler.swift */; };
+		B4F0497127BAF41F00CFF568 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F0496827BAF41F00CFF568 /* LaunchScreen.storyboard */; };
+		B4F0497227BAF41F00CFF568 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F0496A27BAF41F00CFF568 /* Main.storyboard */; };
+		B4F0497327BAF41F00CFF568 /* CurvedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0496D27BAF41F00CFF568 /* CurvedView.swift */; };
+		B4F0497427BAF41F00CFF568 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0496F27BAF41F00CFF568 /* ViewController.swift */; };
+		B4F0497527BAF41F00CFF568 /* InferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0497027BAF41F00CFF568 /* InferenceViewController.swift */; };
+		B4F0497727BC45DA00CFF568 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0497627BC45DA00CFF568 /* AppDelegate.swift */; };
 		F91C8FB0B66E752DE722ECA2 /* Pods_DermaVisionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E17A3F4DBB988CA412B2C3D4 /* Pods_DermaVisionTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +74,21 @@
 		B4CFC00927AC6C70007C3BBA /* DermaVisionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DermaVisionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4CFC00D27AC6C70007C3BBA /* DermaVisionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DermaVisionUITests.swift; sourceTree = "<group>"; };
 		B4CFC00F27AC6C70007C3BBA /* DermaVisionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DermaVisionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B4F0494827BAF21A00CFF568 /* skinCan3.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = skinCan3.tflite; sourceTree = "<group>"; };
+		B4F0494927BAF21A00CFF568 /* mobilenet_quant_v1_224.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenet_quant_v1_224.tflite; sourceTree = "<group>"; };
+		B4F0494A27BAF21A00CFF568 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
+		B4F0494D27BAF21A00CFF568 /* labels_skin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels_skin.txt; sourceTree = "<group>"; };
+		B4F0495A27BAF34500CFF568 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		B4F0495B27BAF34500CFF568 /* CameraFeedManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraFeedManager.swift; sourceTree = "<group>"; };
+		B4F0495F27BAF3E100CFF568 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		B4F0496127BAF3E100CFF568 /* CVPixelBufferExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtension.swift; sourceTree = "<group>"; };
+		B4F0496527BAF40300CFF568 /* ModelDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDataHandler.swift; sourceTree = "<group>"; };
+		B4F0496927BAF41F00CFF568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B4F0496B27BAF41F00CFF568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B4F0496D27BAF41F00CFF568 /* CurvedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurvedView.swift; sourceTree = "<group>"; };
+		B4F0496F27BAF41F00CFF568 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B4F0497027BAF41F00CFF568 /* InferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InferenceViewController.swift; sourceTree = "<group>"; };
+		B4F0497627BC45DA00CFF568 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C76047837BC97721D6719AC9 /* Pods-DermaVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DermaVision.release.xcconfig"; path = "Target Support Files/Pods-DermaVision/Pods-DermaVision.release.xcconfig"; sourceTree = "<group>"; };
 		CF42680700176E6AE8EFC40B /* Pods-DermaVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DermaVision.debug.xcconfig"; path = "Target Support Files/Pods-DermaVision/Pods-DermaVision.debug.xcconfig"; sourceTree = "<group>"; };
 		D169EE849E5BE8310FB2A135 /* Pods-DermaVision-DermaVisionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DermaVision-DermaVisionUITests.release.xcconfig"; path = "Target Support Files/Pods-DermaVision-DermaVisionUITests/Pods-DermaVision-DermaVisionUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,13 +149,22 @@
 		B4CFBFF127AC6C6F007C3BBA /* DermaVision */ = {
 			isa = PBXGroup;
 			children = (
+				B4F0496727BAF41F00CFF568 /* Storyboards */,
+				B4F0496E27BAF41F00CFF568 /* ViewControllers */,
+				B4F0496C27BAF41F00CFF568 /* Views */,
+				B4F0496427BAF40300CFF568 /* ModelDataHandler */,
+				B4F0495E27BAF3E100CFF568 /* Cells */,
+				B4F0496027BAF3E100CFF568 /* Extensions */,
 				B4CFBFF227AC6C6F007C3BBA /* DermaVisionApp.swift */,
 				B4CFBFF427AC6C6F007C3BBA /* ContentView.swift */,
 				B4960CCD27ADC00800604B6B /* HomePageView.swift */,
 				B4960CD927B03D1C00604B6B /* weatherAPI.swift */,
 				B4960CCF27ADC02000604B6B /* CalendarView.swift */,
 				B4960CD127ADC03000604B6B /* RiskDetectionView.swift */,
+				B4F0497627BC45DA00CFF568 /* AppDelegate.swift */,
 				B4CFBFF627AC6C6F007C3BBA /* Assets.xcassets */,
+				B4F0495927BAF34500CFF568 /* Camera Feed */,
+				B4F0494627BAF21A00CFF568 /* Model copy */,
 				B4CFBFF827AC6C6F007C3BBA /* Preview Content */,
 			);
 			path = DermaVision;
@@ -156,6 +195,76 @@
 			path = DermaVisionUITests;
 			sourceTree = "<group>";
 		};
+		B4F0494627BAF21A00CFF568 /* Model copy */ = {
+			isa = PBXGroup;
+			children = (
+				B4F0494827BAF21A00CFF568 /* skinCan3.tflite */,
+				B4F0494927BAF21A00CFF568 /* mobilenet_quant_v1_224.tflite */,
+				B4F0494A27BAF21A00CFF568 /* labels.txt */,
+				B4F0494D27BAF21A00CFF568 /* labels_skin.txt */,
+			);
+			path = "Model copy";
+			sourceTree = "<group>";
+		};
+		B4F0495927BAF34500CFF568 /* Camera Feed */ = {
+			isa = PBXGroup;
+			children = (
+				B4F0495A27BAF34500CFF568 /* PreviewView.swift */,
+				B4F0495B27BAF34500CFF568 /* CameraFeedManager.swift */,
+			);
+			path = "Camera Feed";
+			sourceTree = "<group>";
+		};
+		B4F0495E27BAF3E100CFF568 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B4F0495F27BAF3E100CFF568 /* InfoCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B4F0496027BAF3E100CFF568 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B4F0496127BAF3E100CFF568 /* CVPixelBufferExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B4F0496427BAF40300CFF568 /* ModelDataHandler */ = {
+			isa = PBXGroup;
+			children = (
+				B4F0496527BAF40300CFF568 /* ModelDataHandler.swift */,
+			);
+			path = ModelDataHandler;
+			sourceTree = "<group>";
+		};
+		B4F0496727BAF41F00CFF568 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B4F0496827BAF41F00CFF568 /* LaunchScreen.storyboard */,
+				B4F0496A27BAF41F00CFF568 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B4F0496C27BAF41F00CFF568 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B4F0496D27BAF41F00CFF568 /* CurvedView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B4F0496E27BAF41F00CFF568 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4F0496F27BAF41F00CFF568 /* ViewController.swift */,
+				B4F0497027BAF41F00CFF568 /* InferenceViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		B86BD9652F55C863409BC578 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,7 +275,6 @@
 				FA877B6C8F8EAD05F31A232A /* Pods-DermaVisionTests.debug.xcconfig */,
 				90EC6ECE8B5A1030F7391A8A /* Pods-DermaVisionTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -287,8 +395,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4F0495327BAF21A00CFF568 /* labels.txt in Resources */,
+				B4F0495227BAF21A00CFF568 /* mobilenet_quant_v1_224.tflite in Resources */,
 				B4CFBFFA27AC6C6F007C3BBA /* Preview Assets.xcassets in Resources */,
+				B4F0497227BAF41F00CFF568 /* Main.storyboard in Resources */,
+				B4F0495627BAF21A00CFF568 /* labels_skin.txt in Resources */,
+				B4F0497127BAF41F00CFF568 /* LaunchScreen.storyboard in Resources */,
 				B4CFBFF727AC6C6F007C3BBA /* Assets.xcassets in Resources */,
+				B4F0495127BAF21A00CFF568 /* skinCan3.tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,9 +496,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4F0497527BAF41F00CFF568 /* InferenceViewController.swift in Sources */,
 				B4CFBFF527AC6C6F007C3BBA /* ContentView.swift in Sources */,
+				B4F0496627BAF40300CFF568 /* ModelDataHandler.swift in Sources */,
+				B4F0497727BC45DA00CFF568 /* AppDelegate.swift in Sources */,
 				B4960CCE27ADC00800604B6B /* HomePageView.swift in Sources */,
+				B4F0495D27BAF34500CFF568 /* CameraFeedManager.swift in Sources */,
+				B4F0495C27BAF34500CFF568 /* PreviewView.swift in Sources */,
 				B4960CD027ADC02000604B6B /* CalendarView.swift in Sources */,
+				B4F0496327BAF3E100CFF568 /* CVPixelBufferExtension.swift in Sources */,
+				B4F0497327BAF41F00CFF568 /* CurvedView.swift in Sources */,
+				B4F0497427BAF41F00CFF568 /* ViewController.swift in Sources */,
+				B4F0496227BAF3E100CFF568 /* InfoCell.swift in Sources */,
 				B4960CDA27B03D1C00604B6B /* weatherAPI.swift in Sources */,
 				B4CFBFF327AC6C6F007C3BBA /* DermaVisionApp.swift in Sources */,
 				B4960CD227ADC03000604B6B /* RiskDetectionView.swift in Sources */,
@@ -422,6 +545,25 @@
 			targetProxy = B4CFC00A27AC6C70007C3BBA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B4F0496827BAF41F00CFF568 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4F0496927BAF41F00CFF568 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B4F0496A27BAF41F00CFF568 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4F0496B27BAF41F00CFF568 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B4CFC01127AC6C70007C3BBA /* Debug */ = {
