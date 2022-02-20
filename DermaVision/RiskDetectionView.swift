@@ -9,11 +9,7 @@ import SwiftUI
 
 struct RiskDetectionView: View {
     var body: some View {
-        VStack {
-           // Text("risk detection")
             CustomController()
-        //    BasicViewControllerRepresentable()
-        }
     }
 }
 
