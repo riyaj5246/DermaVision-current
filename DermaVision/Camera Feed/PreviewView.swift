@@ -14,6 +14,20 @@
 
 import UIKit
 import AVFoundation
+import SwiftUI
+
+//struct PreviewViewRepresentable: UIViewRepresentable {
+//       
+//    func makeUIView(context: Context) -> some UIView {
+//            let vc = PreviewView()
+//            return vc
+//        }
+//    
+//        func updateUIView(_ uiView: UIViewType, context: Context) {
+//    
+//        }
+//}
+
 
 /**
  Displays a preview of the image being processed. By default, this uses the device's camera frame,

@@ -14,14 +14,28 @@
 
 import AVFoundation
 import UIKit
+import SwiftUI
+
+//struct BasicViewControllerRepresentable: UIViewControllerRepresentable {
+//
+//    func makeUIViewController(context: Context) -> some UIViewController {
+//        print("reaches")
+//            return ViewController()
+//        }
+//
+//        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+//
+//        }
+//}
 
 class ViewController: UIViewController {
-
   // MARK: Storyboards Connections
   @IBOutlet weak var previewView: PreviewView!
+   // var previewView = PreviewView()
   @IBOutlet weak var cameraUnavailableLabel: UILabel!
   @IBOutlet weak var resumeButton: UIButton!
   @IBOutlet weak var bottomSheetView: CurvedView!
+   // var bottomSheetView = CurvedView()
 
   @IBOutlet weak var bottomSheetViewBottomSpace: NSLayoutConstraint!
   @IBOutlet weak var bottomSheetStateImageView: UIImageView!
@@ -48,9 +62,11 @@ class ViewController: UIViewController {
   // Handles the presenting of results on the screen
   private var inferenceViewController: InferenceViewController?
 
+   // print("here")
   // MARK: View Handling Methods
   override func viewDidLoad() {
     super.viewDidLoad()
+      
 
     guard modelDataHandler != nil else {
       fatalError("Model set up failed")
@@ -64,13 +80,13 @@ class ViewController: UIViewController {
                                            object: nil)
 #endif
     cameraCapture.delegate = self
-
+      
     addPanGesture()
   }
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-
+      print("heree")
     changeBottomViewState()
 
 #if !targetEnvironment(simulator)
