@@ -1,0 +1,6 @@
+framework module Pods_DermaVision_DermaVisionUITests {
+  umbrella header "Pods-DermaVision-DermaVisionUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

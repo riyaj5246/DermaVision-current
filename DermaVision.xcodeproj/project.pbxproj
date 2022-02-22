@@ -1,0 +1,869 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		108159B37A590F1DA9A66818 /* Pods_DermaVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0435D6B1564040FDB055E528 /* Pods_DermaVision.framework */; };
+		AA58AC6E26D276A1625C59C5 /* Pods_DermaVision_DermaVisionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EE1B0FD99B3E90C7B78ED3 /* Pods_DermaVision_DermaVisionUITests.framework */; };
+		B4960CCE27ADC00800604B6B /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4960CCD27ADC00800604B6B /* HomePageView.swift */; };
+		B4960CD027ADC02000604B6B /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4960CCF27ADC02000604B6B /* CalendarView.swift */; };
+		B4960CD227ADC03000604B6B /* RiskDetectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4960CD127ADC03000604B6B /* RiskDetectionView.swift */; };
+		B4960CDA27B03D1C00604B6B /* weatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4960CD927B03D1C00604B6B /* weatherAPI.swift */; };
+		B4CFBFF327AC6C6F007C3BBA /* DermaVisionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CFBFF227AC6C6F007C3BBA /* DermaVisionApp.swift */; };
+		B4CFBFF527AC6C6F007C3BBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CFBFF427AC6C6F007C3BBA /* ContentView.swift */; };
+		B4CFBFF727AC6C6F007C3BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4CFBFF627AC6C6F007C3BBA /* Assets.xcassets */; };
+		B4CFBFFA27AC6C6F007C3BBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4CFBFF927AC6C6F007C3BBA /* Preview Assets.xcassets */; };
+		B4CFC00427AC6C70007C3BBA /* DermaVisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CFC00327AC6C70007C3BBA /* DermaVisionTests.swift */; };
+		B4CFC00E27AC6C70007C3BBA /* DermaVisionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CFC00D27AC6C70007C3BBA /* DermaVisionUITests.swift */; };
+		B4CFC01027AC6C70007C3BBA /* DermaVisionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CFC00F27AC6C70007C3BBA /* DermaVisionUITestsLaunchTests.swift */; };
+		B4F0495127BAF21A00CFF568 /* skinCan3.tflite in Resources */ = {isa = PBXBuildFile; fileRef = B4F0494827BAF21A00CFF568 /* skinCan3.tflite */; };
+		B4F0495227BAF21A00CFF568 /* mobilenet_quant_v1_224.tflite in Resources */ = {isa = PBXBuildFile; fileRef = B4F0494927BAF21A00CFF568 /* mobilenet_quant_v1_224.tflite */; };
+		B4F0495327BAF21A00CFF568 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = B4F0494A27BAF21A00CFF568 /* labels.txt */; };
+		B4F0495627BAF21A00CFF568 /* labels_skin.txt in Resources */ = {isa = PBXBuildFile; fileRef = B4F0494D27BAF21A00CFF568 /* labels_skin.txt */; };
+		B4F0495C27BAF34500CFF568 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0495A27BAF34500CFF568 /* PreviewView.swift */; };
+		B4F0495D27BAF34500CFF568 /* CameraFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0495B27BAF34500CFF568 /* CameraFeedManager.swift */; };
+		B4F0496227BAF3E100CFF568 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0495F27BAF3E100CFF568 /* InfoCell.swift */; };
+		B4F0496327BAF3E100CFF568 /* CVPixelBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0496127BAF3E100CFF568 /* CVPixelBufferExtension.swift */; };
+		B4F0496627BAF40300CFF568 /* ModelDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0496527BAF40300CFF568 /* ModelDataHandler.swift */; };
+		B4F0497127BAF41F00CFF568 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F0496827BAF41F00CFF568 /* LaunchScreen.storyboard */; };
+		B4F0497227BAF41F00CFF568 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F0496A27BAF41F00CFF568 /* Main.storyboard */; };
+		B4F0497327BAF41F00CFF568 /* CurvedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0496D27BAF41F00CFF568 /* CurvedView.swift */; };
+		B4F0497427BAF41F00CFF568 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0496F27BAF41F00CFF568 /* ViewController.swift */; };
+		B4F0497527BAF41F00CFF568 /* InferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0497027BAF41F00CFF568 /* InferenceViewController.swift */; };
+		B4F0497727BC45DA00CFF568 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0497627BC45DA00CFF568 /* AppDelegate.swift */; };
+		B4F0497827BEE2D900CFF568 /* Pods_DermaVisionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E17A3F4DBB988CA412B2C3D4 /* Pods_DermaVisionTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B4CFC00027AC6C70007C3BBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4CFBFE727AC6C6F007C3BBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4CFBFEE27AC6C6F007C3BBA;
+			remoteInfo = DermaVision;
+		};
+		B4CFC00A27AC6C70007C3BBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4CFBFE727AC6C6F007C3BBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4CFBFEE27AC6C6F007C3BBA;
+			remoteInfo = DermaVision;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0435D6B1564040FDB055E528 /* Pods_DermaVision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DermaVision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14EE1B0FD99B3E90C7B78ED3 /* Pods_DermaVision_DermaVisionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DermaVision_DermaVisionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90EC6ECE8B5A1030F7391A8A /* Pods-DermaVisionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DermaVisionTests.release.xcconfig"; path = "Target Support Files/Pods-DermaVisionTests/Pods-DermaVisionTests.release.xcconfig"; sourceTree = "<group>"; };
+		B207D9A65D99FA46D937FBAC /* Pods-DermaVision-DermaVisionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DermaVision-DermaVisionUITests.debug.xcconfig"; path = "Target Support Files/Pods-DermaVision-DermaVisionUITests/Pods-DermaVision-DermaVisionUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B4960CCD27ADC00800604B6B /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		B4960CCF27ADC02000604B6B /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		B4960CD127ADC03000604B6B /* RiskDetectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskDetectionView.swift; sourceTree = "<group>"; };
+		B4960CD927B03D1C00604B6B /* weatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherAPI.swift; sourceTree = "<group>"; };
+		B4CFBFEF27AC6C6F007C3BBA /* DermaVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DermaVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4CFBFF227AC6C6F007C3BBA /* DermaVisionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DermaVisionApp.swift; sourceTree = "<group>"; };
+		B4CFBFF427AC6C6F007C3BBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B4CFBFF627AC6C6F007C3BBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4CFBFF927AC6C6F007C3BBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B4CFBFFF27AC6C70007C3BBA /* DermaVisionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DermaVisionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4CFC00327AC6C70007C3BBA /* DermaVisionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DermaVisionTests.swift; sourceTree = "<group>"; };
+		B4CFC00927AC6C70007C3BBA /* DermaVisionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DermaVisionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4CFC00D27AC6C70007C3BBA /* DermaVisionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DermaVisionUITests.swift; sourceTree = "<group>"; };
+		B4CFC00F27AC6C70007C3BBA /* DermaVisionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DermaVisionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B4F0494827BAF21A00CFF568 /* skinCan3.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = skinCan3.tflite; sourceTree = "<group>"; };
+		B4F0494927BAF21A00CFF568 /* mobilenet_quant_v1_224.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenet_quant_v1_224.tflite; sourceTree = "<group>"; };
+		B4F0494A27BAF21A00CFF568 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
+		B4F0494D27BAF21A00CFF568 /* labels_skin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels_skin.txt; sourceTree = "<group>"; };
+		B4F0495A27BAF34500CFF568 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		B4F0495B27BAF34500CFF568 /* CameraFeedManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraFeedManager.swift; sourceTree = "<group>"; };
+		B4F0495F27BAF3E100CFF568 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		B4F0496127BAF3E100CFF568 /* CVPixelBufferExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtension.swift; sourceTree = "<group>"; };
+		B4F0496527BAF40300CFF568 /* ModelDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDataHandler.swift; sourceTree = "<group>"; };
+		B4F0496927BAF41F00CFF568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B4F0496B27BAF41F00CFF568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B4F0496D27BAF41F00CFF568 /* CurvedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurvedView.swift; sourceTree = "<group>"; };
+		B4F0496F27BAF41F00CFF568 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B4F0497027BAF41F00CFF568 /* InferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InferenceViewController.swift; sourceTree = "<group>"; };
+		B4F0497627BC45DA00CFF568 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C76047837BC97721D6719AC9 /* Pods-DermaVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DermaVision.release.xcconfig"; path = "Target Support Files/Pods-DermaVision/Pods-DermaVision.release.xcconfig"; sourceTree = "<group>"; };
+		CF42680700176E6AE8EFC40B /* Pods-DermaVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DermaVision.debug.xcconfig"; path = "Target Support Files/Pods-DermaVision/Pods-DermaVision.debug.xcconfig"; sourceTree = "<group>"; };
+		D169EE849E5BE8310FB2A135 /* Pods-DermaVision-DermaVisionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DermaVision-DermaVisionUITests.release.xcconfig"; path = "Target Support Files/Pods-DermaVision-DermaVisionUITests/Pods-DermaVision-DermaVisionUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E17A3F4DBB988CA412B2C3D4 /* Pods_DermaVisionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DermaVisionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA877B6C8F8EAD05F31A232A /* Pods-DermaVisionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DermaVisionTests.debug.xcconfig"; path = "Target Support Files/Pods-DermaVisionTests/Pods-DermaVisionTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B4CFBFEC27AC6C6F007C3BBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				108159B37A590F1DA9A66818 /* Pods_DermaVision.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4CFBFFC27AC6C70007C3BBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4F0497827BEE2D900CFF568 /* Pods_DermaVisionTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4CFC00627AC6C70007C3BBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA58AC6E26D276A1625C59C5 /* Pods_DermaVision_DermaVisionUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B4CFBFE627AC6C6F007C3BBA = {
+			isa = PBXGroup;
+			children = (
+				B4CFBFF127AC6C6F007C3BBA /* DermaVision */,
+				B4CFC00227AC6C70007C3BBA /* DermaVisionTests */,
+				B4CFC00C27AC6C70007C3BBA /* DermaVisionUITests */,
+				B4CFBFF027AC6C6F007C3BBA /* Products */,
+				B86BD9652F55C863409BC578 /* Pods */,
+				DAE0941732B580910BEADB3D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B4CFBFF027AC6C6F007C3BBA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4CFBFEF27AC6C6F007C3BBA /* DermaVision.app */,
+				B4CFBFFF27AC6C70007C3BBA /* DermaVisionTests.xctest */,
+				B4CFC00927AC6C70007C3BBA /* DermaVisionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4CFBFF127AC6C6F007C3BBA /* DermaVision */ = {
+			isa = PBXGroup;
+			children = (
+				B4F0495927BAF34500CFF568 /* Camera Feed */,
+				B4F0496727BAF41F00CFF568 /* Storyboards */,
+				B4F0496E27BAF41F00CFF568 /* ViewControllers */,
+				B4F0496C27BAF41F00CFF568 /* Views */,
+				B4F0496427BAF40300CFF568 /* ModelDataHandler */,
+				B4F0495E27BAF3E100CFF568 /* Cells */,
+				B4F0496027BAF3E100CFF568 /* Extensions */,
+				B4CFBFF227AC6C6F007C3BBA /* DermaVisionApp.swift */,
+				B4CFBFF427AC6C6F007C3BBA /* ContentView.swift */,
+				B4960CCD27ADC00800604B6B /* HomePageView.swift */,
+				B4960CD927B03D1C00604B6B /* weatherAPI.swift */,
+				B4960CCF27ADC02000604B6B /* CalendarView.swift */,
+				B4960CD127ADC03000604B6B /* RiskDetectionView.swift */,
+				B4F0497627BC45DA00CFF568 /* AppDelegate.swift */,
+				B4CFBFF627AC6C6F007C3BBA /* Assets.xcassets */,
+				B4F0494627BAF21A00CFF568 /* Model copy */,
+				B4CFBFF827AC6C6F007C3BBA /* Preview Content */,
+			);
+			path = DermaVision;
+			sourceTree = "<group>";
+		};
+		B4CFBFF827AC6C6F007C3BBA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B4CFBFF927AC6C6F007C3BBA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B4CFC00227AC6C70007C3BBA /* DermaVisionTests */ = {
+			isa = PBXGroup;
+			children = (
+				B4CFC00327AC6C70007C3BBA /* DermaVisionTests.swift */,
+			);
+			path = DermaVisionTests;
+			sourceTree = "<group>";
+		};
+		B4CFC00C27AC6C70007C3BBA /* DermaVisionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B4CFC00D27AC6C70007C3BBA /* DermaVisionUITests.swift */,
+				B4CFC00F27AC6C70007C3BBA /* DermaVisionUITestsLaunchTests.swift */,
+			);
+			path = DermaVisionUITests;
+			sourceTree = "<group>";
+		};
+		B4F0494627BAF21A00CFF568 /* Model copy */ = {
+			isa = PBXGroup;
+			children = (
+				B4F0494827BAF21A00CFF568 /* skinCan3.tflite */,
+				B4F0494927BAF21A00CFF568 /* mobilenet_quant_v1_224.tflite */,
+				B4F0494A27BAF21A00CFF568 /* labels.txt */,
+				B4F0494D27BAF21A00CFF568 /* labels_skin.txt */,
+			);
+			path = "Model copy";
+			sourceTree = "<group>";
+		};
+		B4F0495927BAF34500CFF568 /* Camera Feed */ = {
+			isa = PBXGroup;
+			children = (
+				B4F0495A27BAF34500CFF568 /* PreviewView.swift */,
+				B4F0495B27BAF34500CFF568 /* CameraFeedManager.swift */,
+			);
+			path = "Camera Feed";
+			sourceTree = "<group>";
+		};
+		B4F0495E27BAF3E100CFF568 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B4F0495F27BAF3E100CFF568 /* InfoCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B4F0496027BAF3E100CFF568 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B4F0496127BAF3E100CFF568 /* CVPixelBufferExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B4F0496427BAF40300CFF568 /* ModelDataHandler */ = {
+			isa = PBXGroup;
+			children = (
+				B4F0496527BAF40300CFF568 /* ModelDataHandler.swift */,
+			);
+			path = ModelDataHandler;
+			sourceTree = "<group>";
+		};
+		B4F0496727BAF41F00CFF568 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B4F0496827BAF41F00CFF568 /* LaunchScreen.storyboard */,
+				B4F0496A27BAF41F00CFF568 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B4F0496C27BAF41F00CFF568 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B4F0496D27BAF41F00CFF568 /* CurvedView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B4F0496E27BAF41F00CFF568 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4F0496F27BAF41F00CFF568 /* ViewController.swift */,
+				B4F0497027BAF41F00CFF568 /* InferenceViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B86BD9652F55C863409BC578 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF42680700176E6AE8EFC40B /* Pods-DermaVision.debug.xcconfig */,
+				C76047837BC97721D6719AC9 /* Pods-DermaVision.release.xcconfig */,
+				B207D9A65D99FA46D937FBAC /* Pods-DermaVision-DermaVisionUITests.debug.xcconfig */,
+				D169EE849E5BE8310FB2A135 /* Pods-DermaVision-DermaVisionUITests.release.xcconfig */,
+				FA877B6C8F8EAD05F31A232A /* Pods-DermaVisionTests.debug.xcconfig */,
+				90EC6ECE8B5A1030F7391A8A /* Pods-DermaVisionTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DAE0941732B580910BEADB3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0435D6B1564040FDB055E528 /* Pods_DermaVision.framework */,
+				14EE1B0FD99B3E90C7B78ED3 /* Pods_DermaVision_DermaVisionUITests.framework */,
+				E17A3F4DBB988CA412B2C3D4 /* Pods_DermaVisionTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B4CFBFEE27AC6C6F007C3BBA /* DermaVision */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4CFC01327AC6C70007C3BBA /* Build configuration list for PBXNativeTarget "DermaVision" */;
+			buildPhases = (
+				ECE8983857C9B69536608A89 /* [CP] Check Pods Manifest.lock */,
+				B4CFBFEB27AC6C6F007C3BBA /* Sources */,
+				B4CFBFEC27AC6C6F007C3BBA /* Frameworks */,
+				B4CFBFED27AC6C6F007C3BBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DermaVision;
+			productName = DermaVision;
+			productReference = B4CFBFEF27AC6C6F007C3BBA /* DermaVision.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B4CFBFFE27AC6C70007C3BBA /* DermaVisionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4CFC01627AC6C70007C3BBA /* Build configuration list for PBXNativeTarget "DermaVisionTests" */;
+			buildPhases = (
+				33E0848663B69BB234667ADB /* [CP] Check Pods Manifest.lock */,
+				B4CFBFFB27AC6C70007C3BBA /* Sources */,
+				B4CFBFFC27AC6C70007C3BBA /* Frameworks */,
+				B4CFBFFD27AC6C70007C3BBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4CFC00127AC6C70007C3BBA /* PBXTargetDependency */,
+			);
+			name = DermaVisionTests;
+			productName = DermaVisionTests;
+			productReference = B4CFBFFF27AC6C70007C3BBA /* DermaVisionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B4CFC00827AC6C70007C3BBA /* DermaVisionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4CFC01927AC6C70007C3BBA /* Build configuration list for PBXNativeTarget "DermaVisionUITests" */;
+			buildPhases = (
+				EEC9D2304CD3F7A501EB3822 /* [CP] Check Pods Manifest.lock */,
+				B4CFC00527AC6C70007C3BBA /* Sources */,
+				B4CFC00627AC6C70007C3BBA /* Frameworks */,
+				B4CFC00727AC6C70007C3BBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4CFC00B27AC6C70007C3BBA /* PBXTargetDependency */,
+			);
+			name = DermaVisionUITests;
+			productName = DermaVisionUITests;
+			productReference = B4CFC00927AC6C70007C3BBA /* DermaVisionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B4CFBFE727AC6C6F007C3BBA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					B4CFBFEE27AC6C6F007C3BBA = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					B4CFBFFE27AC6C70007C3BBA = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = B4CFBFEE27AC6C6F007C3BBA;
+					};
+					B4CFC00827AC6C70007C3BBA = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = B4CFBFEE27AC6C6F007C3BBA;
+					};
+				};
+			};
+			buildConfigurationList = B4CFBFEA27AC6C6F007C3BBA /* Build configuration list for PBXProject "DermaVision" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B4CFBFE627AC6C6F007C3BBA;
+			productRefGroup = B4CFBFF027AC6C6F007C3BBA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4CFBFEE27AC6C6F007C3BBA /* DermaVision */,
+				B4CFBFFE27AC6C70007C3BBA /* DermaVisionTests */,
+				B4CFC00827AC6C70007C3BBA /* DermaVisionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B4CFBFED27AC6C6F007C3BBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4F0495327BAF21A00CFF568 /* labels.txt in Resources */,
+				B4F0495227BAF21A00CFF568 /* mobilenet_quant_v1_224.tflite in Resources */,
+				B4CFBFFA27AC6C6F007C3BBA /* Preview Assets.xcassets in Resources */,
+				B4F0497227BAF41F00CFF568 /* Main.storyboard in Resources */,
+				B4F0495627BAF21A00CFF568 /* labels_skin.txt in Resources */,
+				B4F0497127BAF41F00CFF568 /* LaunchScreen.storyboard in Resources */,
+				B4CFBFF727AC6C6F007C3BBA /* Assets.xcassets in Resources */,
+				B4F0495127BAF21A00CFF568 /* skinCan3.tflite in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4CFBFFD27AC6C70007C3BBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4CFC00727AC6C70007C3BBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33E0848663B69BB234667ADB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DermaVisionTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECE8983857C9B69536608A89 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DermaVision-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEC9D2304CD3F7A501EB3822 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DermaVision-DermaVisionUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B4CFBFEB27AC6C6F007C3BBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4F0497527BAF41F00CFF568 /* InferenceViewController.swift in Sources */,
+				B4CFBFF527AC6C6F007C3BBA /* ContentView.swift in Sources */,
+				B4F0496627BAF40300CFF568 /* ModelDataHandler.swift in Sources */,
+				B4F0497727BC45DA00CFF568 /* AppDelegate.swift in Sources */,
+				B4960CCE27ADC00800604B6B /* HomePageView.swift in Sources */,
+				B4F0495D27BAF34500CFF568 /* CameraFeedManager.swift in Sources */,
+				B4F0495C27BAF34500CFF568 /* PreviewView.swift in Sources */,
+				B4960CD027ADC02000604B6B /* CalendarView.swift in Sources */,
+				B4F0496327BAF3E100CFF568 /* CVPixelBufferExtension.swift in Sources */,
+				B4F0497327BAF41F00CFF568 /* CurvedView.swift in Sources */,
+				B4F0497427BAF41F00CFF568 /* ViewController.swift in Sources */,
+				B4F0496227BAF3E100CFF568 /* InfoCell.swift in Sources */,
+				B4960CDA27B03D1C00604B6B /* weatherAPI.swift in Sources */,
+				B4CFBFF327AC6C6F007C3BBA /* DermaVisionApp.swift in Sources */,
+				B4960CD227ADC03000604B6B /* RiskDetectionView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4CFBFFB27AC6C70007C3BBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4CFC00427AC6C70007C3BBA /* DermaVisionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4CFC00527AC6C70007C3BBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4CFC01027AC6C70007C3BBA /* DermaVisionUITestsLaunchTests.swift in Sources */,
+				B4CFC00E27AC6C70007C3BBA /* DermaVisionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B4CFC00127AC6C70007C3BBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4CFBFEE27AC6C6F007C3BBA /* DermaVision */;
+			targetProxy = B4CFC00027AC6C70007C3BBA /* PBXContainerItemProxy */;
+		};
+		B4CFC00B27AC6C70007C3BBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4CFBFEE27AC6C6F007C3BBA /* DermaVision */;
+			targetProxy = B4CFC00A27AC6C70007C3BBA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B4F0496827BAF41F00CFF568 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4F0496927BAF41F00CFF568 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B4F0496A27BAF41F00CFF568 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4F0496B27BAF41F00CFF568 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B4CFC01127AC6C70007C3BBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B4CFC01227AC6C70007C3BBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B4CFC01427AC6C70007C3BBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF42680700176E6AE8EFC40B /* Pods-DermaVision.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DermaVision/Preview Content\"";
+				DEVELOPMENT_TEAM = 9W9HCV37TS;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses camera to classify the objects that appear in the camera feed.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = riyaApp.DermaVision;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B4CFC01527AC6C70007C3BBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C76047837BC97721D6719AC9 /* Pods-DermaVision.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DermaVision/Preview Content\"";
+				DEVELOPMENT_TEAM = 9W9HCV37TS;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses camera to classify the objects that appear in the camera feed.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = riyaApp.DermaVision;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B4CFC01727AC6C70007C3BBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA877B6C8F8EAD05F31A232A /* Pods-DermaVisionTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9W9HCV37TS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = riyaApp.DermaVisionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DermaVision.app/DermaVision";
+			};
+			name = Debug;
+		};
+		B4CFC01827AC6C70007C3BBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90EC6ECE8B5A1030F7391A8A /* Pods-DermaVisionTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9W9HCV37TS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = riyaApp.DermaVisionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DermaVision.app/DermaVision";
+			};
+			name = Release;
+		};
+		B4CFC01A27AC6C70007C3BBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B207D9A65D99FA46D937FBAC /* Pods-DermaVision-DermaVisionUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9W9HCV37TS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = riyaApp.DermaVisionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DermaVision;
+			};
+			name = Debug;
+		};
+		B4CFC01B27AC6C70007C3BBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D169EE849E5BE8310FB2A135 /* Pods-DermaVision-DermaVisionUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9W9HCV37TS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = riyaApp.DermaVisionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DermaVision;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B4CFBFEA27AC6C6F007C3BBA /* Build configuration list for PBXProject "DermaVision" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4CFC01127AC6C70007C3BBA /* Debug */,
+				B4CFC01227AC6C70007C3BBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4CFC01327AC6C70007C3BBA /* Build configuration list for PBXNativeTarget "DermaVision" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4CFC01427AC6C70007C3BBA /* Debug */,
+				B4CFC01527AC6C70007C3BBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4CFC01627AC6C70007C3BBA /* Build configuration list for PBXNativeTarget "DermaVisionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4CFC01727AC6C70007C3BBA /* Debug */,
+				B4CFC01827AC6C70007C3BBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4CFC01927AC6C70007C3BBA /* Build configuration list for PBXNativeTarget "DermaVisionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4CFC01A27AC6C70007C3BBA /* Debug */,
+				B4CFC01B27AC6C70007C3BBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B4CFBFE727AC6C6F007C3BBA /* Project object */;
+}
