@@ -53,6 +53,8 @@ struct HomePageView: View {
                 
             }
         }
+        .colorScheme(.light)
+
     
     }
         

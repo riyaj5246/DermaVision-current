@@ -26,7 +26,9 @@ struct ContentView: View {
                     Text("Daily Tracker")
                 }
        }
+        .colorScheme(.light)
     }
+
 }
 
 

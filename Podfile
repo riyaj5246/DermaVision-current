@@ -8,6 +8,8 @@ target 'DermaVision' do
   pod 'TensorFlowLiteSwift'
   # Pods for DermaVision
 
+  pod 'YACalendar'
+
   target 'DermaVisionTests' do
     inherit! :search_paths
     # Pods for testing

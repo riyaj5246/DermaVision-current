@@ -9,7 +9,11 @@ import SwiftUI
 
 struct RiskDetectionView: View {
     var body: some View {
+        VStack {
             CustomController()
+                .colorScheme(.light)
+        }
+
     }
 }
 
