@@ -1,100 +1,13 @@
 //
-//  HomePageView.swift
+//  NotificationManager.swift
 //  DermaVision
 //
-//  Created by Riya Jain on 2/4/22.
+//  Created by Riya Jain on 3/6/22.
 //
 
-import SwiftUI
+import Foundation
 import UserNotifications
 
-struct HomePageView: View {
-    @State var forecast = [[String]]()
-    @State var personName = "Riya"
-    @State private var currentDate = Date()
-
-    
-    var body: some View {
-        ScrollView {
-            VStack {
-                Text("""
-                     Welcome,
-                     \(personName)!
-                     """)
-                    .font(.system(size: 50))
-                    .fontWeight(.black)
-                    .foregroundColor(Color("Color2"))
-                    .multilineTextAlignment(.leading)
-                    .padding(.leading, -140.0)
-                    .onAppear{
-                        let x = getData()
-                        var counter = 0
-                        forecast.removeAll()
-                        while counter < 24 {
-                            forecast.append(x[counter])
-                            counter += 1
-                        }
-                       // forecast = getData()
-                    }
-                
-                
-                Text("Here's the upcoming UV Forecast:")
-                        .font(.system(size: 25))
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("Color1"))
-                        .multilineTextAlignment(.leading)
-                        .padding()
-                    
-                List(forecast, id: \.self) { day in forecastListItemView(arrayItem: day)
-                    }
-                    .padding(.top, -10)
-                    .frame(width: 500.0, height: 500.0)
-                    
-
-                
-                Spacer()
-                
-
-                HStack {
-                    Text("Daily Morning Reminder")
-                        .font(.system(size: 20))
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("Color1"))
-                    DatePicker("", selection: $currentDate, displayedComponents: .hourAndMinute)
-                        .labelsHidden()
-                        .font(.system(size: 15))
-                        .foregroundColor(Color("Color4"))
-
-                }
-                Button("Set and Save Reminder Time") {
-                    let calendar = Calendar.current
-                    let hr = calendar.component(.hour, from: currentDate)
-                    let minute = calendar.component(.minute, from: currentDate)
-                    
-                    NotificationManager.instance.cancelNotification()
-                    NotificationManager.instance.scheduleNotification(min: minute, hr: hr, name: personName)
-
-                    print("\(hr), \(minute)")
-                }
-                .font(.system(size: 18))
-                .foregroundColor(Color("Color3"))
-                .padding()
-                .background(RoundedRectangle(cornerSize: CGSize(width: 2, height: 2))
-                                .fill(Color("Color2"))
-                                .shadow(radius: 2))
-        
-                
-            }
-        }
-        .colorScheme(.light)
-        .onAppear{
-            UIApplication.shared.applicationIconBadgeNumber = 0
-            NotificationManager.instance.requestAuthorization()
-        }
-    
-    }
-        
-}
 
 class NotificationManager {
     static let instance = NotificationManager() //singleton
@@ -111,10 +24,10 @@ class NotificationManager {
         }
     }
     
-    func scheduleNotification(min: Int, hr: Int, name: String){
+    func scheduleNotification(){
         let content = UNMutableNotificationContent()
-        content.title = "Good Morning, \(name)!☀️☀️"
-        content.subtitle = "Remember to apply SPF before going outside!"
+        content.title = "First notif"
+        content.subtitle = "NOtif subtitle"
         content.sound = .default
         content.badge = 1
         
@@ -122,8 +35,8 @@ class NotificationManager {
         // trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         //calendar
         var dateComponents = DateComponents()
-        dateComponents.hour = hr
-        dateComponents.minute = min
+        dateComponents.hour = 0
+        dateComponents.minute = 19
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         //location
@@ -140,7 +53,6 @@ class NotificationManager {
         UNUserNotificationCenter.current().removeAllDeliveredNotifications()
     }
 }
-
 
 struct forecastListItemView: View {
     
@@ -207,11 +119,5 @@ struct forecastListItemView: View {
         //.frame(width: -1.0, height: 51.0)
 
         
-    }
-}
-
-struct HomePageView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomePageView()
     }
 }
