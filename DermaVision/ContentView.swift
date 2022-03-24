@@ -10,10 +10,15 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
+            Logout()
+                .tabItem{
+                    Image(systemName: "person.crop.circle.fill")
+                    Text("Login")
+                }
             HomePageView()
                 .tabItem{
-                    Image(systemName: "house")
-                    Text("Home")
+                    Image(systemName: "sun.max")
+                    Text("UV Forecast")
                 }
             RiskDetectionView()
                 .tabItem{
