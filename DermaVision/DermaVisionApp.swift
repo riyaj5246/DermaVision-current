@@ -10,7 +10,8 @@ import Firebase
 
 @main
 struct DermaVisionApp: App {
-    
+    @StateObject private var locationManager = LocationManager()
+
     init(){
         FirebaseApp.configure()
     }
@@ -18,6 +19,8 @@ struct DermaVisionApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(locationManager)
+
         }
     }
 }

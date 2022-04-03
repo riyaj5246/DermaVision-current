@@ -14,8 +14,8 @@ struct HomePageView: View {
     @State private var currentDate = Date()
     @State private var showingAlert = false
     @State private var willMoveToNextScreen = false
-
-
+    @EnvironmentObject private var locationManager: LocationManager
+    @State private var isLocationTurnedOn = false
     
     var body: some View {
         NavigationView {
@@ -60,6 +60,8 @@ struct HomePageView: View {
                     
                     NavigationLink(destination: UVInfoPage()) {
                         Text("Breaking Down Ultraviolet Index")
+                            .foregroundColor(Color("Color1"))
+
                     }
                                
                     HStack {
@@ -94,15 +96,43 @@ struct HomePageView: View {
                         Alert(title: Text("New Notification Setting Set"), message: Text("Daily reminder to wear sunscreen."), dismissButton: .default(Text("Got it!")))
                     }
                     
+                    VStack {
+                        Text("""
+                             Enable location-based sunscreen reminders
+                             (get notified when you leave home)
+                             """)
+                        .font(.subheadline)
+                            .fontWeight(.light)
+                            .foregroundColor(Color("Color2"))
+                            .multilineTextAlignment(.center)
+                            
+
+                        Toggle(isOn: $isLocationTurnedOn) {
+                            Text("")
+                        }
+                        .padding(.trailing, 30)
+                        .frame(width: 9.0)
+                        .onTapGesture {
+                            if(isLocationTurnedOn){
+                              //  requestNotification()
+                            }
+                    }
+                    }
+                    
                 }
             }
             .colorScheme(.light)
             .onAppear{
                 UIApplication.shared.applicationIconBadgeNumber = 0
                 NotificationManager.instance.requestAuthorization()
+            }
         }
-        }
+        
+
+    }
     
+    func requestNotification() {
+      locationManager.validateLocationAuthorizationStatus()
     }
         
 }

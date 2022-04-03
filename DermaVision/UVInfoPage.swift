@@ -37,7 +37,7 @@ struct UVInfoPage: View {
                 UVListItem(info: ["Extreme", "11+", "Unprotected skin can burn in minutes, avoid reflective and bright surfaces, steer clear of sun during the afternoon, and take all other precautions."])
             }
             
-            Link("Click here for EPA guidelines", destination: URL(string: "https://www.epa.gov/sites/default/files/documents/uviguide.pdf")!)
+            Link("Click here for further details", destination: URL(string: "https://www.epa.gov/sites/default/files/documents/uviguide.pdf")!)
                 .font(.system(size: 20))
                 .foregroundColor(Color("Color1"))
         }

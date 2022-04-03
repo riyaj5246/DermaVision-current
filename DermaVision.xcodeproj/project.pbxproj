@@ -68,6 +68,7 @@
 		B4E7854B27ECEEC0006A5EB3 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E7854A27ECEEC0006A5EB3 /* CustomDatePicker.swift */; };
 		B4E7854D27F135B5006A5EB3 /* CalendarStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E7854C27F135B5006A5EB3 /* CalendarStory.storyboard */; };
 		B4E7854F27F8DDF9006A5EB3 /* UVInfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E7854E27F8DDF9006A5EB3 /* UVInfoPage.swift */; };
+		B4E7855327F966F8006A5EB3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E7855227F966F8006A5EB3 /* LocationManager.swift */; };
 		B4F0495C27BAF34500CFF568 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0495A27BAF34500CFF568 /* PreviewView.swift */; };
 		B4F0495D27BAF34500CFF568 /* CameraFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0495B27BAF34500CFF568 /* CameraFeedManager.swift */; };
 		B4F0496227BAF3E100CFF568 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F0495F27BAF3E100CFF568 /* InfoCell.swift */; };
@@ -138,6 +139,7 @@
 		B4E7854A27ECEEC0006A5EB3 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		B4E7854C27F135B5006A5EB3 /* CalendarStory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CalendarStory.storyboard; path = ../../../../Downloads/CalendarStory.storyboard; sourceTree = "<group>"; };
 		B4E7854E27F8DDF9006A5EB3 /* UVInfoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVInfoPage.swift; sourceTree = "<group>"; };
+		B4E7855227F966F8006A5EB3 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B4F0495A27BAF34500CFF568 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		B4F0495B27BAF34500CFF568 /* CameraFeedManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraFeedManager.swift; sourceTree = "<group>"; };
 		B4F0495F27BAF3E100CFF568 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				B4F0495E27BAF3E100CFF568 /* Cells */,
 				B4F0496027BAF3E100CFF568 /* Extensions */,
 				B4CFBFF227AC6C6F007C3BBA /* DermaVisionApp.swift */,
+				B4E7855227F966F8006A5EB3 /* LocationManager.swift */,
 				B4E7853227ECEB50006A5EB3 /* SceneDelegate.swift */,
 				B4E7853827ECEC85006A5EB3 /* Task.swift */,
 				B4E7853A27ECECA7006A5EB3 /* HomeCal.swift */,
@@ -637,6 +640,7 @@
 				B4F0497527BAF41F00CFF568 /* InferenceViewController.swift in Sources */,
 				B4E784EE27ECE3B3006A5EB3 /* Logout.swift in Sources */,
 				B4CFBFF527AC6C6F007C3BBA /* ContentView.swift in Sources */,
+				B4E7855327F966F8006A5EB3 /* LocationManager.swift in Sources */,
 				B4F0496627BAF40300CFF568 /* ModelDataHandler.swift in Sources */,
 				B4E7854127ECED69006A5EB3 /* CalendarCell.swift in Sources */,
 				B4E7853D27ECECE4006A5EB3 /* EventRepository.swift in Sources */,
@@ -848,6 +852,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses camera to classify the objects that appear in the camera feed.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses location to remind you to wear sunscreen as you leave your house!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -879,6 +884,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses camera to classify the objects that appear in the camera feed.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses location to remind you to wear sunscreen as you leave your house!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
