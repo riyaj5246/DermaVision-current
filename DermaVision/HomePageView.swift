@@ -14,6 +14,8 @@ struct HomePageView: View {
     @State private var currentDate = Date()
     @State private var showingAlert = false
     @State private var willMoveToNextScreen = false
+    @State private var sunriseTime = ""
+    @State private var sunsetTime = ""
     @EnvironmentObject private var locationManager: LocationManager
     @State private var isLocationTurnedOn = false
     
@@ -38,6 +40,8 @@ struct HomePageView: View {
                                 forecast.append(x[counter])
                                 counter += 1
                             }
+                            sunriseTime = forecast[0][4]
+                            sunsetTime = forecast[0][5]
                            // forecast = getData()
                         }
                     
@@ -47,8 +51,23 @@ struct HomePageView: View {
                             .fontWeight(.bold)
                             .foregroundColor(Color("Color1"))
                             .multilineTextAlignment(.leading)
-                            .padding()
-                        
+                    HStack{
+                        Text(sunriseTime)
+                            .font(.system(size: 20))
+                            .foregroundColor(Color("Color2"))
+                            .fontWeight(.light)
+
+                        Image(systemName: "diamond")
+                            .foregroundColor(Color("Color2"))
+                            .padding(EdgeInsets(top: 3, leading: 10, bottom: 10, trailing: 10))
+
+                        Text(sunsetTime)
+                            .font(.system(size: 20))
+                            .foregroundColor(Color("Color2"))
+                            .fontWeight(.light)
+
+                    }
+                    
                     List(forecast, id: \.self) { day in forecastListItemView(arrayItem: day)
                         }
                         .padding(.top, -10)
@@ -153,9 +172,14 @@ class NotificationManager {
     }
     
     func scheduleNotification(min: Int, hr: Int, name: String){
+        
+        let forecastData = getData()
+        let currentUVI = forecastData[0][1]
+        let currentExposure = forecastData[0][2]
+        
         let content = UNMutableNotificationContent()
-        content.title = "Good Morning, \(name)!☀️☀️"
-        content.subtitle = "Remember to apply SPF before going outside!"
+        content.title = "Hello, \(name)!☀️☀️"
+        content.subtitle = "The current UVI is \(currentUVI), which is a \(currentExposure) level of exposure. Remember to take necessary precautions!"
         content.sound = .default
         content.badge = 1
         
@@ -193,17 +217,24 @@ struct forecastListItemView: View {
                 .fontWeight(.bold)
                 .multilineTextAlignment(.leading)
                 .lineLimit(4)
-                .frame(width: 150, height: 50)
+                .frame(width: 100, height: 50)
                 .foregroundColor(Color("Color2"))
                 .font(.headline)
-                
+            
+            Text(arrayItem[3])
+                .font(.system(size: 17))
+                .fontWeight(.bold)
+                .multilineTextAlignment(.trailing)
+                .frame(width: 75, height: 50)
+                .foregroundColor(Color("Color2"))
+                .font(.body)
                
             Text(arrayItem[1])
                 .font(.system(size: 23))
                 .fontWeight(.light)
                 .multilineTextAlignment(.trailing)
                 .lineLimit(3)
-                .frame(width: 150, height: 50)
+                .frame(width: 125, height: 50)
                 .foregroundColor(Color("Color2"))
                 .font(.body)
              
@@ -211,7 +242,7 @@ struct forecastListItemView: View {
                 Text(arrayItem[2])
                     .fontWeight(.bold)
                     .foregroundColor(.white)
-                    .frame(width: 150, height: 50)
+                    .frame(width: 100, height: 50)
                     .background(Circle()
                                     .fill(.red)
                                     .opacity(0.7))

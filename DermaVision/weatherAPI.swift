@@ -42,6 +42,7 @@ func getData() -> [[String]] {
             //CURRENT DATA
             if let currentData = dictionary["current"] as? [String:Any] {
                
+                print(currentData)
                // setting time
                 let epochTime = TimeInterval(truncating: currentData["dt"] as! NSNumber)
 //                if let offsetTime = dictionary["timezone_offset"] as? NSNumber {
@@ -66,6 +67,15 @@ func getData() -> [[String]] {
                 let dateString = format.string(from: date)
                 print(dateString)
                 
+                
+                let sunriseTime = TimeInterval(truncating: currentData["sunrise"] as! NSNumber)
+                let dateSunrise = Date(timeIntervalSince1970: sunriseTime)
+                let dateStringSunrise = format.string(from: dateSunrise)
+                
+                let sunsetTime = TimeInterval(truncating: currentData["sunset"] as! NSNumber)
+                let dateSunset = Date(timeIntervalSince1970: sunsetTime)
+                let dateStringSunset = format.string(from: dateSunset)
+                
                 //getting UV Data
                 let uvData = currentData["uvi"] as! NSNumber
                 
@@ -74,7 +84,7 @@ func getData() -> [[String]] {
                 
                 let uvRisk: String
                 
-                if inte >= 8 {
+                if inte >= 7 {
                     uvRisk = "High"
                 }
                 else if inte >= 2 {
@@ -83,11 +93,18 @@ func getData() -> [[String]] {
                 else {
                     uvRisk = "Low"
                 }
-                                
+                   
+                let temperature = currentData["temp"] as! NSNumber
+                let tempDub = (temperature.doubleValue - 273.15)*(9/5) + 32
+                let tempInt = Int(tempDub)
+                
                 var currArray = [String]()
                 currArray.append("Current: \(dateString)")
                 currArray.append("UVI: \(uvData)")
                 currArray.append(uvRisk)
+                currArray.append("\(tempInt) F")
+                currArray.append("Sunrise: \(dateStringSunrise)")
+                currArray.append("Sunset: \(dateStringSunset)")
                 
                 dataExportArr.append(currArray)
              //   print(dataExportArr)
@@ -132,7 +149,7 @@ func getData() -> [[String]] {
                         
                         let uvRisk: String
                         
-                        if inte > 8 {
+                        if inte > 7 {
                             uvRisk = "High"
                         }
                         else if inte >= 2 {
@@ -142,10 +159,15 @@ func getData() -> [[String]] {
                             uvRisk = "Low"
                         }
                         
+                        let temperature = x["temp"] as! NSNumber
+                        let tempDub = (temperature.doubleValue - 273.15)*(9/5) + 32
+                        let tempInt = Int(tempDub)
+                        
                         var currArray = [String]()
                         currArray.append("\(dateString)")
                         currArray.append("UVI: \(uvData)")
                         currArray.append(uvRisk)
+                        currArray.append("\(tempInt) F")
                         
                         print(uvRisk)
 
